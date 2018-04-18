@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Header name -->
+        <title>Login</title>
+
+        <!-- Meta Tag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- Include StyleSheet -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- Flip library -->
+        <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Some Javascript for flipping -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".container").flip({
+                    trigger: 'manual'
+                });
+                $('#click_me').click(function(){
+                    $(".container").flip(true);
+                })
+                $('#click_me2').click(function(){
+                    $(".container").flip(false);
+                })
+            });  
+        </script>
+
+
+        <div class="container">
+            <!-- Front = What is show first -->
+            <div class="front">
+                <!-- Center the form in the middle -->
+                <div class="center">
+                    <!-- Div containing all the form -->
+                    <div class="myForm">
+                        <!-- Header of form -->
+                        <div class="col-md-12 text-center"> 
+                            <h1>Login</h1>
+                        </div>
+                        <!-- Center all the input -->
+                        <div class="center-form">
+                            <div class="input">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                    <input type="email" class="form-control" id="InputEmail" placeholder="Email">
+                                </div>
+                                <div class="separator"></div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                                </div>
+                                <div class="separator-bt"></div>
+                                <div class="col-md-12 text-center"> 
+                                    <button type="button" class="btn btn-success" id="login">Login</button>
+                                </div>   
+                            </div>
+                            <div class="signup">
+                                <div class="col-md-12 text-center"> 
+                                    <button type="button" class="btn" id="click_me">Click here to sign up !</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Back = Show when click on sign up -->
+            <div class="back">
+                <!-- Center the form in the middle -->
+                <div class="center">
+                    <!-- Div containing all the form -->
+                    <div class="myForm">
+                        <!-- Header of form -->
+                        <div class="col-md-12 text-center"> 
+                            <h1>Sign up</h1>
+                        </div>
+                        <!-- Center all the input -->
+                        <div class="center-form">
+                            <div class="input">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                    <input type="email" class="form-control" id="InputEmail" placeholder="Email">
+                                </div>
+                                <div class="separator"></div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                                </div>
+                                <div class="separator-bt"></div>
+                                <div class="col-md-12 text-center"> 
+                                    <button type="button" class="btn btn-primary">Sign Up</button>
+                                </div>   
+                            </div>
+                            <div class="signup">
+                                <div class="col-md-12 text-center"> 
+                                    <button type="button" class="btn" id="click_me2">Click here to login !</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

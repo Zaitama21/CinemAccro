@@ -1,0 +1,64 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: montserrat, arial, verdana;
+    background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
+}
+
+.center-form{
+    position: relative;
+    top:20%;
+}
+
+.myForm{
+    border-radius: 10px;
+    background: #fff;
+    width: 30em;
+    height: 30em;
+    padding-top:15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn{
+    min-width:100px;
+}
+
+
+.login-header{
+    padding-top:15px;
+}
+
+.input{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.separator{
+    margin-top: 15px;
+}
+.separator-bt{
+    margin-top: 30px;
+}
+
+.signup{
+    padding-top: 60px;
+}
+
+.container{
+    position: absolute;
+    margin-top: 25%;
+}
+
