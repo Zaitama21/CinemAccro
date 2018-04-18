@@ -25,7 +25,7 @@
 
     <body>
 
-        <!-- Some Javascript for flipping -->
+        <!-- Some Javascript for flipping and check input-->
         <script type="text/javascript">
             $(document).ready(function() {
                 $(".container").flip({
@@ -37,6 +37,26 @@
                 $('#click_me2').click(function(){
                     $(".container").flip(false);
                 })
+                $('#signupbt').click(function(){
+                    if(document.getElementById("inputFirstName").value.length == 0){
+                        $("#exampleModal").modal()
+                    }
+                    if(document.getElementById("inputLastName").value.length == 0){
+                        $("#exampleModal").modal()
+                    }
+                    if(document.getElementById("inputEmail").value.length == 0){
+                        $("#exampleModal").modal()
+                    }
+                    if(document.getElementById("inputPassword").value.length == 0){
+                        $("#exampleModal").modal()
+                    }
+                    if($("#inputSemester :selected").text() == "Choose your semester..."){
+                        $("#exampleModal").modal()
+                    }
+                    if($("#inputGroup :selected").text() == "Choose your group..."){
+                        $("#exampleModal").modal()
+                    }
+                })
             });  
         </script>
 
@@ -47,7 +67,7 @@
                 <!-- Center the form in the middle -->
                 <div class="center">
                     <!-- Div containing all the form -->
-                    <div class="myForm">
+                    <div class="login">
                         <!-- Header of form -->
                         <div class="col-md-12 text-center"> 
                             <h1>Login</h1>
@@ -69,7 +89,7 @@
                                     <button type="button" class="btn btn-success" id="login">Login</button>
                                 </div>   
                             </div>
-                            <div class="signup">
+                            <div class="return">
                                 <div class="col-md-12 text-center"> 
                                     <button type="button" class="btn" id="click_me">Click here to sign up !</button>
                                 </div>
@@ -78,39 +98,110 @@
                     </div>
                 </div>
             </div>
+            
             <!-- Back = Show when click on sign up -->
             <div class="back">
                 <!-- Center the form in the middle -->
                 <div class="center">
                     <!-- Div containing all the form -->
-                    <div class="myForm">
+                    <div class="signup">
                         <!-- Header of form -->
                         <div class="col-md-12 text-center"> 
                             <h1>Sign up</h1>
                         </div>
                         <!-- Center all the input -->
-                        <div class="center-form">
+                        <div class="center-signup">
                             <div class="input">
+                                <form class="signupform">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                <input type="text" class="form-control" id="inputFirstName" placeholder="First Name"> 
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                <input type="text" class="form-control is-valid" id="inputLastName" placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="separator"></div>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                    <input type="email" class="form-control" id="InputEmail" placeholder="Email">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                                 </div>
                                 <div class="separator"></div>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                    <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                                 </div>
+                                <div class="separator"></div>
+                                <select id="inputSemester" class="form-control">
+                                    <option selected>Choose your semester...</option>
+                                    <option>INFOS1</option>
+                                    <option>INFOS2</option>
+                                    <option>INFOS3</option>
+                                    <option>INFOS4</option>
+                                </select>
+                                <div class="separator"></div>
+                                <select id="inputGroup" class="form-control">
+                                    <option selected>Choose your group...</option>
+                                    <option>A1-1</option>
+                                    <option>A1-2</option>
+                                    <option>B1-1</option>
+                                    <option>B1-2</option>
+                                    <option>B2-1</option>
+                                    <option>B2-2</option>
+                                    <option>C1-1</option>
+                                    <option>C1-2</option>
+                                    <option>C2-1</option>
+                                    <option>C2-2</option>
+                                    <option>D1-1</option>
+                                    <option>D1-2</option>
+                                    <option>D2-1</option>
+                                    <option>D2-2</option>
+                                    <option>E1-1</option>
+                                    <option>E1-2</option>
+                                    <option>E2-1</option>
+                                    <option>E2-2</option>
+                                    <option>INT1-1</option>
+                                    <option>INT1-2</option>
+                                    <option>INT2-1</option>
+                                    <option>INT2-2</option>
+                                </select>
                                 <div class="separator-bt"></div>
                                 <div class="col-md-12 text-center"> 
-                                    <button type="button" class="btn btn-primary">Sign Up</button>
+                                    <button type="button" class="btn btn-primary" id="signupbt">Sign Up</button>
                                 </div>   
                             </div>
-                            <div class="signup">
+                            <div class="return">
                                 <div class="col-md-12 text-center"> 
                                     <button type="button" class="btn" id="click_me2">Click here to login !</button>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Error</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        You must fill all the fields
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

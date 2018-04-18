@@ -10,6 +10,7 @@ body {
     background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
 }
 
+
 .center{
     position: absolute;
     top: 50%;
@@ -22,8 +23,12 @@ body {
     position: relative;
     top:20%;
 }
+.center-signup{
+    position: relative;
+    top:10%;
+}
 
-.myForm{
+.login{
     border-radius: 10px;
     background: #fff;
     width: 30em;
@@ -31,6 +36,21 @@ body {
     padding-top:15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.signup{
+    border-radius: 10px;
+    background: #fff;
+    width: 30em;
+    height: 40em;
+    padding-top:15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.signupform{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 
 .btn{
     min-width:100px;
@@ -53,7 +73,7 @@ body {
     margin-top: 30px;
 }
 
-.signup{
+.return{
     padding-top: 60px;
 }
 
